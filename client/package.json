@@ -1,10 +1,11 @@
 {
   "name": "haven_web_wallet",
-  "version": "1.30.0",
+  "version": "1.33.0",
   "private": true,
   "dependencies": {
     "chart.js": "^2.9.1",
     "clipboard-polyfill": "^2.8.6",
+    "electron": "^7.0.0",
     "react": "^16.11.0",
     "react-chartjs-2": "^2.8.0",
     "react-dom": "^16.11.0",
@@ -16,13 +17,16 @@
     "redux-thunk": "^2.3.0",
     "styled-components": "^4.4.0"
   },
+  "main": "./electron-starter.js",
   "scripts": {
+
     "start": "react-scripts start",
     "start:mainnet": "sh -ac '. .env.production;react-scripts start'",
     "build:test": "sh -ac '. .env.test; npm version patch; react-scripts build'",
     "build:production": "sh -ac '. .env.production; npm version minor; react-scripts build'",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "electron": "electron ."
   },
   "eslintConfig": {
     "extends": "react-app"
